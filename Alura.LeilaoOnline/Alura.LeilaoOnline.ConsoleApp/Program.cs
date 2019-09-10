@@ -18,7 +18,7 @@ namespace Alura.LeilaoOnline.ConsoleApp
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(
-                    $"TESTE FALHOU! VALOR ESPERADO: {ValorEsperado}, VALOR OBTIDO:{ValorObtido}");
+                    $"TESTE FALHOU! VALOR ESPERADO: {ValorEsperado}, MAIOR VALOR OBTIDO:{ValorObtido}");
             }
 
             Console.ForegroundColor = cor;
