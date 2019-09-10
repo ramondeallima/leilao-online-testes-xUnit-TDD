@@ -3,8 +3,10 @@ using Xunit;
 
 namespace Alura.LeilaoOnline.Tests
 {
+    // A classe de testes deve sempre ser pública
     public class LeilaoTestes
     {
+        // Anotação necessária para que o framework reconheça o método como um teste de unidade.
         [Fact]
         public void LeilaoComVariosLances()
         {
