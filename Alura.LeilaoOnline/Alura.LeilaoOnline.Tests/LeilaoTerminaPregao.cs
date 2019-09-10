@@ -3,16 +3,20 @@ using Xunit;
 
 namespace Alura.LeilaoOnline.Tests
 {
-    // A classe de testes deve sempre ser pública
-    public class LeilaoTestes
+    // Boas práticas para nomenclatura de classes e métodos de testes
+
+    // O nome da classe de teste, deve ser o nome da classe e o 
+    // método sendo testado.
+    public class LeilaoTerminaPregao
     {
 
-        // Anotação necessária para que o framework reconheça o método como um teste de unidade.
         [Theory]
-        [InlineData(1000, new double[] { 800, 900, 1000, 1200 })]
+        [InlineData(1200, new double[] { 800, 900, 1000, 1200 })]
         [InlineData(1000, new double[] { 800, 900, 1000, 990 })]
         [InlineData(800, new double[] { 800 })]
-        public void LeilaoComVariosLances(
+
+        // O nome do método deve ser o comportamento esperado
+        public void RetornaMaiorValorDadoLeilaoComPeloMenosUmLance(
             double valorEsperado, 
             double[] ofertas)
         {
@@ -36,7 +40,8 @@ namespace Alura.LeilaoOnline.Tests
         }
 
         [Fact]
-        public void LeilaoSemLances()
+        // O nome do método deve ser o comportamento esperado
+        public void RetornaZeroDadoLeilaoSemLances()
         {
             //Arranje - cenário
             var leilao = new Leilao("Van Gogh");
